@@ -22,7 +22,7 @@ public class MedicoController {
     private MedicoRepository repository;
 
     @PostMapping
-    public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroMedico dados, UriComponentsBuilder uriBilder) {
+    public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastrosMedico dados, UriComponentsBuilder uriBilder) {
         var medico = new Medico(dados);
         repository.save(medico);
         var uri = uriBilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();

@@ -30,12 +30,11 @@ public class Medico {
 
     private boolean ativo;
 
-    public Medico(DadosCadastroMedico dados) {
+    public Medico(DadosCadastrosMedico dados) {
         this.ativo = true;
         this.nome = dados.nome();
         this.email = dados.email();
         this.telefone = dados.telefone();
-        this.pais = dados.pais();
         this.crm = dados.crm();
         this.especialidade = dados.especialidade();
         this.endereco = new Endereco(dados.endereco());
